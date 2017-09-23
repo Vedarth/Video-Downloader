@@ -1,7 +1,6 @@
 from __future__ import unicode_literals
 import youtube_dl
-
-
+import loc
 class MyLogger(object):
     def debug(self, msg):
         pass
@@ -19,12 +18,7 @@ def my_hook(d):
 
 
 ydl_opts = {
-    'format': 'bestaudio/best',
-    'postprocessors': [{
-        'key': 'FFmpegExtractAudio',
-        'preferredcodec': 'mp3',
-        'preferredquality': '192',
-    }],
+    'format' : 'bestvideo[ext!=webm]‌​+bestaudio[ext!=webm]‌​/best[ext!=webm]',
     'logger': MyLogger(),
     'progress_hooks': [my_hook],
 }

@@ -1,6 +1,6 @@
 from __future__ import unicode_literals
 import youtube_dl
-
+import loc
 
 class MyLogger(object):
     def debug(self, msg):
